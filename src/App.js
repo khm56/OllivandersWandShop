@@ -1,18 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import wands from "./wands";
+import Sidebar from "./Sidebar";
+import WandsList from "./WandsList";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div
+        id="app"
+        className="container-fluid"
+        style={{
+          backgroundImage:
+            "url(http://images5.fanpop.com/image/photos/28800000/hogwarts-harry-potter-28869061-1920-1081.jpg)",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover"
+        }}
+      >
+        <div className="row">
+          <Sidebar />
+          <WandsList wands={wands} />
+        </div>
       </div>
     );
   }
